@@ -1,6 +1,7 @@
 package com.androiddevs.runningappyt.db
 
 import androidx.room.Database
+import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 
@@ -9,7 +10,7 @@ import androidx.room.TypeConverters
     version = 1
 )
 @TypeConverters(Converters::class)
-abstract  class RunningDatabase {
+abstract class RunningDatabase: RoomDatabase() {
 
     abstract fun getRunDao(): RunDao
 }
